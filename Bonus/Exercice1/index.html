@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 1</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body ng-app="appValidForm" ng-controller="formCtrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-12" >
+        <h1>Exercie 1</h1>
+        <p>Faire un formulaire de saisie d'adresse e-mail. Si l'adresse comporte le symbole @, alors une div verte apparait. S'il n'est pas là, une div rouge apparaît pour avertir l'utilisateur que sa saisie est incorrecte.</p>
+      </div>
+      <div class="col-12" >
+        <form name="form">
+            <label for="userMail"> Votre courriel</label> <input type="email" name="mailuser" ng-model="userMail" ng-pattern required />
+            <div>
+                <p>{{form.$valid}}</p>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

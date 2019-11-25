@@ -1,0 +1,7 @@
+.form-control.ng-invalid.submitStyle {
+  background-color: red;
+}
+
+.form-control.ng-valid.submitStyle {
+  background-color: rgba(46, 204, 113, 1);
+}

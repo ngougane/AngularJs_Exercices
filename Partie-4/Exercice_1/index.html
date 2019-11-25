@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 1</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-between">
+        <button class="btn btn-primary" type="button" name="button" ng-click="count = count + 1" ng-init="count=0" > + </button>
+        <p> {{ count }} </p>
+        <button class="btn btn-primary" type="button" name="button" ng-click="count = count - 1" ng-init="count=0"> - </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

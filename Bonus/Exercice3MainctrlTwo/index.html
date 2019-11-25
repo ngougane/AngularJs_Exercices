@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>AngularJS - Bonus - Exercice 3</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-route.js"></script>
+  <script src="assets/script/script.js"></script>
+  <script src="assets/script/angular-locale_fr-fr.js"></script>
+</head>
+<body ng-app="appFormViews" ng-controller="mainCtrl">
+  <div class="container">
+    <ul class="nav nav-tabs" ng-class="{active : isActive($index)}">
+      <li class="nav-item" ng-repeat="tab in tabs">
+        <a  class="nav-link" href="#" ng-click="setActive($index)">{{tab.subject}}</a>
+      </li>
+    </ul>
+    <h1>Mon formulaire</h1>
+    <p>Veuilllez remplir les champs suivants : </p>
+    <form name="form">
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label for="userName"> Votre nom : </label>
+          <input type="text" name="userName" class="form-control" ng-model="userName" ng-class="{submitStyle :submit}" required >
+          <p>{{userName.$valid}}</p>
+          <label for="userMail"> Votre courriel : </label>
+          <input type="email" name="userMail" class="form-control" ng-model="userMail" ng-class="{submitStyle :submit}" required>
+          <p>{{userMail.$valid}}</p>
+        </div>
+      </div>
+      <div class="form-row ">
+        <div class="form-group col-12">
+          <label for="userSubject"> Votre sujet : </label>
+          <input type="text" name="userSubject" class="form-control" ng-model="userSubject" ng-class="{submitStyle :submit}" required>
+          <p>{{userSubject.$valid}}</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label for="userText"> Votre texte : </label>
+          <textarea name="userText" rows="8" cols="80" class="form-control" ng-model="userText" ng-class="{submitStyle :submit}" required minlength="10"></textarea>
+          <p>{{userText.$valid}}</p>
+        </div>
+        <div class="form-group col-12">
+          <button class="btn btn-secondary" type="submit" name="buttonValid" ng-click="addTab(form.$valid)">Envoyer</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <!-- NOTE: https://docs.angularjs.org/api/ngMessages Mettre ng-ngMessages pour personnaliser les erreurs -->
+          <div ng-if = "submit && form.$invalid" role="alert"> Vous avez des erreurs.</div>
+
+          <div ng-if = "form.userName.$invalid" role="alert">
+            <ul>
+              <li ng-repeat="(type, error) in form.userName.$error">Le nom comporte une erreur : {{type}}</li>
+            </ul>
+          </div>
+          <div ng-if = "form.userMail.$invalid" role="alert">
+            <ul>
+              <li ng-repeat="(type, error) in form.userMail.$error">Votre courriel comporte une erreur : {{type}}</li>
+            </ul>
+          </div>
+          <div ng-if = "form.userSubject.$invalid" role="alert">
+            <ul>
+              <li ng-repeat="(type, error) in form.userSubject.$error">Le sujet comporte une erreur :  {{type}}</li>
+            </ul>
+          </div>
+          <div ng-if = "form.userText.$invalid" role="alert">
+            <ul>
+              <li ng-repeat="(type, error) in form.userText.$error">Votre texte comporte une erreur : {{type}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-content col-12 bg-success">
+          <h1> {{tabs[active].name}} </h1>
+          <p> {{tabs[active].mail}} </p>
+          <h2> {{tabs[active].subject}} </h2>
+          <p> {{tabs[active].texte}} </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="App">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body ng-controller="voituresCtrl">
+    <div class="container">
+      <table class="table">
+        <tr>
+          <th>Voitures</th>
+          <th>Couleurs</th>
+        </tr>
+        <tr ng-repeat="voiture in voitures">
+          <th> {{voiture.marque}} </th>
+          <th> {{voiture.couleur}}</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

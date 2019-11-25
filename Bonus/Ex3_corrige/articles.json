@@ -1,0 +1,52 @@
+[
+   {
+      "id":"0",
+      "nameArticle":"article1",
+      "categorie":"categorie1",
+      "reference":"ATSDM",
+      "description":"article 1er choix",
+      "image":"img/image1.jpeg",
+      "imageMiniature":"img/image1min.jpeg",
+      "prix":"15"
+   },
+   {
+      "id":"1",
+      "nameArticle":"article2",
+      "categorie":"categorie1",
+      "reference":"ATSDM",
+      "description":"article 1er choix",
+      "image":"img/image2.jpeg",
+      "imageMiniature":"img/image2min.jpeg",
+      "prix":"25"
+   },
+   {
+      "id":"2",
+      "nameArticle":"article3",
+      "categorie":"categorie2",
+      "reference":"ATSDM",
+      "description":"article 1er choix",
+      "image":"img/image1.jpeg",
+      "imageMiniature":"img/image1min.jpeg",
+      "prix":"15"
+   },
+   {
+      "id":"3",
+      "nameArticle":"article4",
+      "categorie":"categorie2",
+      "reference":"ATSDM",
+      "description":"article 1er choix",
+      "image":"img/image2.jpeg",
+      "imageMiniature":"img/image2min.jpeg",
+      "prix":"10"
+   },
+   {
+      "id":"4",
+      "nameArticle":"article5",
+      "categorie":"categorie2",
+      "reference":"ATSDM",
+      "description":"article 1er choix",
+      "image":"img/image1.jpeg",
+      "imageMiniature":"img/image1min.jpeg",
+      "prix":"15"
+   }
+]

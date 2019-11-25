@@ -1,0 +1,23 @@
+<!-- formulaire -->
+<form name="emailForm">
+    <ul>
+      <li>
+        <label for="lastname">Nom : </label><input type="text" name="lastname" ng-model="userLastname"/>
+      </li>
+      <li>
+        <label for="email">Email : </label><input type="email" name="email" ng-model="userEmail"/>
+      </li>
+      <li>
+        <label for="subject">Sujet : </label><input type="text" name="subject" ng-model="userSubject"/>
+      </li>
+      <li>
+        <label for="text">Texte : </label><textarea name="text" ng-model="userText"></textarea>
+      </li>
+      <li>
+        <button type="button" name="button" ng-click="showSubject()">Envoyer</button>
+      </li>
+    </ul>
+  </form>
+<ul>
+  <li ng-repeat="subject in subjects track by $index"><a ng-href="#!/mailcontent/{{$index}}">{{subject}}</a></li>
+</ul>

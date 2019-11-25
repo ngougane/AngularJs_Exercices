@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 5</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p ng-show="showParagraphe" > Sidi El Le terme "agile" définit une approche de gestion de projet qui prend le contre-pied des approches traditionnelles prédictives et séquentielles de type cycle en V ou waterfall (en cascade). La notion même de "gestion de projet" est remise en question au profit de "gestion de produit". De façon à raisonner davantage "produit" que "projet". Après tout l'objectif d'un projet consiste bien à donner naissance à un produit.</p>
+        <p ng-hide="showParagraphe">Le terme "agile" définit une approche de gestion de projet qui prend le contre-pied des approches traditionnelles prédictives et séquentielles de type cycle en V ou waterfall (en cascade). La notion même de "gestion de projet" est remise en question au profit de "gestion de produit". De façon à raisonner davantage "produit" que "projet". Après tout l'objectif d'un projet consiste bien à donner naissance à un produit.</p>
+        <button type="button" name="button" class="btn btn-primary" ng-click="showParagraphe = true"> Bouton 1 </button>
+        <button type="button" name="button" class="btn btn-secondary" ng-click="showParagraphe = false"> Bouton 2 </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
